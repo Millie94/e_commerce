@@ -3,6 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>E - Commerce Store</title>
+    <script type="text/javascript">
+
+      img = new Array("coffee-bag1.jpg","coffee-bag2.jpg","coffee-bag3.jpg");
+
+      i = 0;
+      Cnt = img.length;
+
+      function go(){
+        if (document.images) {
+          i++;
+          if (i == Cnt) {
+             i = 0;
+          }
+          document.coffee.src = img[i];
+          setTimeout("go()", 2 * 1000);
+        }
+      }
+
+    </script>
+    <noscript>Sorry your browser doesnt support Javascript</noscript>
     <style media="screen">
       body{
         background-color: #eeeeee;
@@ -37,61 +57,9 @@
         opacity: 0.7;
         filter: alpha(opacity=70);
       }
-      .slideshow{
-        height: 35%;
-        width: 80%;
-      }
-        #slides{
-          position: relative;
-          height: 400px;
-          padding: 0px;
-          margin: 0px;
-          list-style-type: none;
-        }
-        .slide{
-          position: absolute;
-          left: 0px;
-          top: 0px;
-          width: 100%;
-          height: 100%;
-          opacity: 0;
-          z-index: 1;
-          max-width: 100%;
-          max-height: 100%;
-
-          -webkit-transition: opacity 1s;
-          -moz-transition: opacity 1s;
-          -o-transition: opacity 1s;
-          transition: opacity 1s;
-        }
-      .showing{
-          opacity: 1;
-          z-index: 2;
-        }
-      .slide:nth-of-type(1) {
-        background: url("coffee-bag1.jpg");
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-      }
-      .slide:nth-of-type(2) {
-        background: url("coffee-bag2.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-      }
-      .slide:nth-of-type(3) {
-        background: url("coffee-bag3.jpg");
-        background-size: cover;
-        background-position: top center;
-        background-repeat: no-repeat;
-        overflow: hidden;
-      }
     </style>
   </head>
-  <body>
+  <body onload="go()">
     <!--Contains all content-->
     <div class="content">
 
@@ -123,13 +91,8 @@
 
       <!--Contains slideshow-->
       <center>
-      <div class="slideshow">
-        <ul id="slides">
-          <li class="slide showing"></li>
-          <li class="slide"></li>
-          <li class="slide"></li>
-        </ul>
-      </div></center><br><br>
+        <img src="coffee-bag1.jpg" name="coffee" width="40%">
+      </center><br><br>
 
       <div class="product-ex">
         <center>
