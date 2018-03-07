@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>E - Commerce Store</title>
+    <style media="screen">
+      body{
+        background-color: #eeeeee;
+      }
+      .space{
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+      .top-nav, td, p{
+        color: #999999;
+        font-size: 1em;
+        font-family: Courier;
+      }
+      .footer td, a{
+        color: black;
+        font-size: .9em;
+        text-decoration: none;
+      }
+      .banner{
+        max-width: 80%;
+      }
+      .top-nav a{
+        text-decoration: none;
+        color: #999999;
+        font-family: Courier;
+      }
+      img{
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+      .product-ex td:hover{
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+      .slideshow{
+        height: 35%;
+        width: 80%;
+      }
+        #slides{
+          position: relative;
+          height: 400px;
+          padding: 0px;
+          margin: 0px;
+          list-style-type: none;
+        }
+        .slide{
+          position: absolute;
+          left: 0px;
+          top: 0px;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          z-index: 1;
+          max-width: 100%;
+          max-height: 100%;
+
+          -webkit-transition: opacity 1s;
+          -moz-transition: opacity 1s;
+          -o-transition: opacity 1s;
+          transition: opacity 1s;
+        }
+      .showing{
+          opacity: 1;
+          z-index: 2;
+        }
+      .slide:nth-of-type(1) {
+        background: url("coffee-bag1.jpg");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .slide:nth-of-type(2) {
+        background: url("coffee-bag2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+      .slide:nth-of-type(3) {
+        background: url("coffee-bag3.jpg");
+        background-size: cover;
+        background-position: top center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Contains all content-->
+    <div class="content">
+
+      <!--Top navigation-->
+      <div class="top-nav">
+        <center>
+          <table>
+            <tr>
+              <td>PRODUCTS</td>
+              <td class="space"></td><td></td>
+              <td><a href="brand.html">OUR BRAND</a></td>
+              <td class="space"></td><td></td>
+              <td>FAQ</td>
+              <td class="space"></td><td></td>
+              <td>CONTACT</td>
+              <td class="space"></td><td></td>
+              <td>CART</td>
+            </tr>
+          </table>
+        </center>
+      </div><hr width="40%" color="#cccccc"><br>
+
+      <!--Main Banner-->
+      <div class="main-banner">
+        <center>
+          <img class="banner" src="coffee-emp.jpg" alt="site-banner"><br><br>
+        </center>
+      </div><br>
+
+      <!--Contains slideshow-->
+      <center>
+      <div class="slideshow">
+        <ul id="slides">
+          <li class="slide showing"></li>
+          <li class="slide"></li>
+          <li class="slide"></li>
+        </ul>
+      </div></center><br><br>
+
+      <div class="product-ex">
+        <center>
+        <table>
+          <tr>
+            <td><img src="coffee-bag1.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+            <td style="width: 10%; height: 30%;"></td>
+            <td><img src="coffee-bag3.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+            <td style="width: 10%; height: 30%;"></td>
+            <td><img src="coffee-bag2.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+          </tr>
+          <tr>
+            <td><img src="coffee-bag3.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+            <td style="width: 10%; height: 30%;"></td>
+            <td><img src="coffee-bag2.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+            <td style="width: 10%; height: 30%;"></td>
+            <td><img src="coffee-bag1.jpg" height="160px" style="max-width: 100%; min-width: 50%; border-radius: 3%; margin-top: 12%;"></td>
+          </tr>
+        </table><br>
+        <p style="max-width: 75%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p style="max-width: 75%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </center>
+      </div>
+
+      <div class="footer">
+        <center>
+          <table>
+            <tr>
+              <td>PRODUCTS</td>
+              <td class="space"></td><td></td>
+              <td><a href="brand.html">OUR BRAND</a></td>
+              <td class="space"></td><td></td>
+              <td>FAQ</td>
+              <td class="space"></td><td></td>
+              <td>CONTACT</td>
+              <td class="space"></td><td></td>
+              <td>RETURN POLICY</td>
+              <td class="space"></td><td></td>
+              <td>CART</td>
+            </tr>
+          </table>
+          <p>Copyright &copy; 2018 Millie Bobbitt Inc.</p>
+        </center>
+      </div>
+
+    </div>
+
+  </body>
+</html>
